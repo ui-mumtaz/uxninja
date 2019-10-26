@@ -1,0 +1,47 @@
+<div class="container m-4">
+    <div class="text-center">
+        <h2>Our <span class="text-primary"> Products </span></h2>
+        <p>This is a wider card with supporting text below as a natural lead-in to additional content. This card has
+            even longer content than the first to show that equal height action. </p>
+    </div>
+    <hr class="mb-3">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card-group">
+                <div class="card p-3">
+                    <img src="../../assets/images/laptop.jpg" class="img-fluid" alt="Laptop">
+                    <div class="card-body">
+                        <h5 class="card-title">Laptop</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                        <a href="javascript:void(0)" (click)="onSelectProduct('Laptop')">Select this product</a>
+                    </div>
+                </div>
+                <div class="card p-3">
+                    <img src="../../assets/images/mobile.jpg" class="img-fluid" alt="Mobile">
+                    <div class="card-body">
+                        <h5 class="card-title">Mobile</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                            <a href="javascript:void(0)" (click)="onSelectProduct('Mobile')">Select this product</a>
+                        </div>
+                </div>
+                <div class="card p-3">
+                    <img src="../../assets/images/television.png" class="img-fluid" alt="Laptop">
+                    <div class="card-body">
+                        <h5 class="card-title">Television</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                            <a href="javascript:void(0)" (click)="onSelectProduct('Television')">Select this product</a>
+                        </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-12 m-3 py-4 bg-success text-white text-center">
+            <h2 *ngIf="!productSelected">Please select any product</h2>
+            <h2 *ngIf="productSelected">{{selectProduct}} is selected</h2>
+            <button class="btn btn-light mt-4">Add to Cart</button>
+        </div>
+    </div>
+</div>
