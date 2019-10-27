@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HeaderService } from './../../services/header.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -9,12 +10,12 @@ import { HeaderService } from './../../services/header.service';
 export class HeaderComponent implements OnInit {
 
   goBackLink; // For back link
-  headerNav: Boolean = true; // For Menu
-  headerLoginBlock: Boolean = false; // For Login Block
-  headerContactDetail: Boolean = true; // For Contact Detail
-  loggedInUser: Boolean = true; // For Contact Detail
+  headerNav: Boolean; // For Menu
+  headerLoginBlock: Boolean; // For Login Block
+  headerContactDetail: Boolean; // For Contact Detail
+  loggedInUser; // For Login Block
 
-  constructor(private header: HeaderService) {
+  constructor(private header: HeaderService, private router: Router) {
     // For Header Contact Detail
     this.header.headerContactDetail.subscribe(res => {
       this.headerContactDetail = res;
@@ -30,9 +31,27 @@ export class HeaderComponent implements OnInit {
       this.goBackLink = res;
     })
 
+    // For Login Block
+    this.header.headerLoginBlock.subscribe(res => {
+      this.headerLoginBlock = res;
+    })
+
+    // For Contact Detail
+    this.header.loggedInUser.subscribe(res => {
+      this.loggedInUser = res;
+    })
+
   }
 
   ngOnInit() {
   }
 
+  login() {
+    this.router.navigate(['login']);
+  }
+
+  onLoggedOut() {
+    this.header.loggedInUser.next('');
+    this.router.navigate(['login']);
+  }
 }

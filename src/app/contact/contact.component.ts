@@ -12,10 +12,12 @@ export class ContactComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.header.headerContactDetail.next(true)
+    this.header.headerLoginBlock.next(false)
   }
 
   ngOnDestroy(): void {
     this.header.headerContactDetail.next(false)
+    this.header.headerLoginBlock.next(true)
   }
 
 }

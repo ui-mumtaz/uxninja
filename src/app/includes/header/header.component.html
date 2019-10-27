@@ -26,10 +26,10 @@
     </ul>
     <div class="navbar-text">
         <ng-container *ngIf="headerLoginBlock">
-            <button *ngIf="!loggedInUser" class="btn btn-outline-primary">Sign In</button>
+            <button *ngIf="!loggedInUser" class="btn btn-outline-primary" (click)="login()">Sign In</button>
             <ul *ngIf="loggedInUser" class="list-group list-group-horizontal-sm">
-                <li class="list-group-item bg-transparent border-0 p-3">Welcome <strong class="text-primary">UX Ninja</strong></li>
-                <li class="list-group-item bg-transparent border-0 p-2"><button class="btn btn-outline-primary"><i class="fa fa-unlock"></i> Logout</button></li>
+                <li class="list-group-item bg-transparent border-0 p-3">Welcome <strong class="text-primary">{{loggedInUser}}</strong></li>
+                <li class="list-group-item bg-transparent border-0 p-2"><button class="btn btn-outline-primary" (click)="onLoggedOut()"><i class="fa fa-unlock"></i> Logout</button></li>
             </ul>
         </ng-container>
         <ul class="list-group list-group-horizontal-sm" *ngIf="headerContactDetail">
