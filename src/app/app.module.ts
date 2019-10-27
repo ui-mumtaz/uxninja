@@ -13,6 +13,8 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { LoginComponent } from './login/login.component';
 import { GalleryItems } from './gallery/gallery';
 import { GalleryItemComponent } from './gallery-item/gallery-item.component';
+import { CustomDropdownComponent } from './custom-dropdown/custom-dropdown.component';
+import { DropdownDirective } from './custom-dropdown/dropdown.directive';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -38,7 +40,9 @@ const appRoutes: Routes = [
     ContactComponent,
     GalleryComponent,
     LoginComponent,
-    GalleryItemComponent
+    GalleryItemComponent,
+    CustomDropdownComponent,
+    DropdownDirective
   ],
   imports: [
     BrowserModule,
