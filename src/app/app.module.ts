@@ -13,6 +13,10 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { LoginComponent } from './login/login.component';
 import { GalleryItems } from './gallery/gallery';
 import { GalleryItemComponent } from './gallery-item/gallery-item.component';
+import { LaptopComponent } from './products/laptop/laptop.component';
+import { MobileComponent } from './products/mobile/mobile.component';
+import { TelevisionComponent } from './products/television/television.component';
+import { WashingMachineComponent } from './products/washing-machine/washing-machine.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -20,7 +24,11 @@ const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'products', children:[
-    { path: '', component: ProductsComponent}
+    { path: '', component: ProductsComponent},
+    { path: 'laptop', component: LaptopComponent},
+    { path: 'mobile', component: MobileComponent},
+    { path: 'television', component: TelevisionComponent},
+    { path: 'washing-machine', component: WashingMachineComponent}
   ]},
   { path: 'gallery', component: GalleryComponent },
   { path: 'gallery/:id', component: GalleryItemComponent },
@@ -38,7 +46,11 @@ const appRoutes: Routes = [
     ContactComponent,
     GalleryComponent,
     LoginComponent,
-    GalleryItemComponent
+    GalleryItemComponent,
+    LaptopComponent,
+    MobileComponent,
+    TelevisionComponent,
+    WashingMachineComponent
   ],
   imports: [
     BrowserModule,

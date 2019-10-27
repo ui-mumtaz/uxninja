@@ -18,7 +18,7 @@ export class GalleryItemComponent implements OnInit, OnDestroy {
   ngOnInit() {
     
     this.header.headerNav.next(false);
-    this.header.goBackLink.next(true);
+    this.header.goBackLink.next({text:'Back to Gallery', url:'/gallery'});
     
     this.galleryImage = this.gallery.galleryImages;
     
@@ -31,7 +31,7 @@ export class GalleryItemComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.header.headerNav.next(true);
-    this.header.goBackLink.next(false);
+    this.header.goBackLink.next({text:'', url:''});
   }
 
 }

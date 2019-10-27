@@ -8,7 +8,7 @@ import { HeaderService } from './../../services/header.service';
 })
 export class HeaderComponent implements OnInit {
 
-  goBackLink: Boolean = false; // For back link
+  goBackLink; // For back link
   headerNav: Boolean = true; // For Menu
   headerLoginBlock: Boolean = false; // For Login Block
   headerContactDetail: Boolean = true; // For Contact Detail

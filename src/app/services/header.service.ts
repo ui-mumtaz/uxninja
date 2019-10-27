@@ -10,5 +10,5 @@ export class HeaderService {
 
   headerContactDetail = new BehaviorSubject(false) // For Header contact detail
   headerNav = new BehaviorSubject(true) // For Header contact detail
-  goBackLink = new BehaviorSubject(false)  // For Back link
+  goBackLink = new BehaviorSubject({text:'', url:''})  // For Back link
 }

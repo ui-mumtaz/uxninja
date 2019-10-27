@@ -4,7 +4,7 @@
     <ng-container *ngIf="goBackLink">
         <div class="row no-gutters ml-4">
             <!-- <a href="javascript:void(0)" class="pr-4"> <i class="fa fa-chevron-left"></i> Back to Products</a> -->
-            <a href="javascript:void(0)" routerLink="/gallery"> <i class="fa fa-chevron-left"></i> Back to Gallery</a>
+            <a href="javascript:void(0)" routerLink="{{goBackLink.url}}"> <i class="fa fa-chevron-left"></i> {{goBackLink.text}}</a>
         </div>
     </ng-container>
     <ul *ngIf="headerNav" class="navbar-nav mr-auto mt-2 ml-4 mt-lg-0">
