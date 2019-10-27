@@ -23,8 +23,7 @@ const appRoutes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
-  { path: 'products', children:[
-    { path: '', component: ProductsComponent},
+  { path: 'products', component: ProductsComponent, children:[
     { path: 'laptop', component: LaptopComponent},
     { path: 'mobile', component: MobileComponent},
     { path: 'television', component: TelevisionComponent},

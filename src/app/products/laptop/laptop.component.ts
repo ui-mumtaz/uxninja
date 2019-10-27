@@ -11,13 +11,13 @@ export class LaptopComponent implements OnInit, OnDestroy {
   constructor(private header: HeaderService) { }
 
   ngOnInit() {
-    this.header.headerNav.next(false);
-    this.header.goBackLink.next({text:'Back to Products', url:'/products'});
+    // this.header.headerNav.next(false);
+    // this.header.goBackLink.next({text:'Back to Products', url:'/products'});
   }
 
   ngOnDestroy(): void {
-    this.header.headerNav.next(true);
-    this.header.goBackLink.next({text:'', url:''});
+    // this.header.headerNav.next(true);
+    // this.header.goBackLink.next({text:'', url:''});
   }
 
 }
