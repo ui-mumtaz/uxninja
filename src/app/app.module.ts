@@ -11,14 +11,19 @@ import { ProductsComponent } from './products/products.component';
 import { ContactComponent } from './contact/contact.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { LoginComponent } from './login/login.component';
+import { GalleryItems } from './gallery/gallery';
+import { GalleryItemComponent } from './gallery-item/gallery-item.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
-  { path: 'products', component: ProductsComponent },
+  { path: 'products', children:[
+    { path: '', component: ProductsComponent}
+  ]},
   { path: 'gallery', component: GalleryComponent },
+  { path: 'gallery/:id', component: GalleryItemComponent },
   { path: 'contact', component: ContactComponent }
 ]
 
@@ -32,13 +37,14 @@ const appRoutes: Routes = [
     ProductsComponent,
     ContactComponent,
     GalleryComponent,
-    LoginComponent
+    LoginComponent,
+    GalleryItemComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [GalleryItems],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

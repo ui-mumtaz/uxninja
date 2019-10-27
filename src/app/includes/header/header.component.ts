@@ -19,6 +19,17 @@ export class HeaderComponent implements OnInit {
     this.header.headerContactDetail.subscribe(res => {
       this.headerContactDetail = res;
     })
+
+    // For Menu
+    this.header.headerNav.subscribe(res => {
+      this.headerNav = res;
+    })
+
+    // For Go Back Link
+    this.header.goBackLink.subscribe(res => {
+      this.goBackLink = res;
+    })
+
   }
 
   ngOnInit() {

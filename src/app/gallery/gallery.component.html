@@ -1,1 +1,20 @@
-<p>gallery works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-12 mx-auto border">
+            <div class="col-md-12 py-3">
+                <h1>Our Gallery</h1>
+            </div>
+            <div class="row img-gallery m-2">
+                <div class="col-md-3" *ngFor="let item of galleryImages">
+                    <a routerLink="{{item.id}}">
+                        <figure class="figure">
+                            <img src="{{item.imgUrl}}" class="figure-img img-fluid" alt="">
+                            <figcaption class="figure-caption">{{item.title}}</figcaption>
+                        </figure>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

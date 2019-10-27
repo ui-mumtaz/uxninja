@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+
+.page-area {
+    width: 80%;
+    margin: 0 auto;
+    padding: 15px;
+    background: rgba(248, 248, 248, 0.22);
+    box-shadow: inset 0 0 107px -42px #000;
+}
+.card{
+    display: inline-block;
+    margin: 0 10px 10px;
+    width: 23%;
+}
